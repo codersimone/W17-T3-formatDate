@@ -1,7 +1,7 @@
 let date = new Date(2022, 6, 19, 23, 30, 0, 0);
 console.log(date); // для дебага
 function formatDate(date) {
-    console.log(date);
+    console.log(date); // для дебага
     let lessOneSec = new Date() - date;
     if (lessOneSec < 1000) {
     return 'прямо сейчас';
