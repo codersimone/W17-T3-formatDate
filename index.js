@@ -1,5 +1,7 @@
-function formatDate() {
-    let date = new Date(2022, 6, 19, 23, 30, 0, 0);
+let date = new Date(2022, 6, 19, 23, 30, 0, 0);
+console.log(date); // для дебага
+function formatDate(date) {
+    console.log(date);
     let lessOneSec = new Date() - date;
     if (lessOneSec < 1000) {
     return 'прямо сейчас';
@@ -13,6 +15,7 @@ function formatDate() {
     return lessOneHour + ' мин. назад';
     }
     let fullDate = date;
+    console.log(fullDate); // не срабатывает первая строка массива fullDate.getDate если в параметрах функции указываю date. Если оставляю круглые скобки пустыми и оставляю переменную date вне функции или убираю внутрь функции - все работает.
     fullDate = [
     '0' + fullDate.getDate(),
     '0' + (fullDate.getMonth() + 1),
